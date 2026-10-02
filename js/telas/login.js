@@ -32,9 +32,11 @@
         <div class="login-foto" aria-hidden="true"></div>
         <div class="login-card">
           <div class="login-marca">
-            <h1>Consulta de Escala</h1>
+            <span class="login-simbolo" aria-hidden="true">5×2</span>
+            <h1>Escala em dia</h1>
+            <p>Equipe de Entrega</p>
           </div>
-          <p class="login-chamada">Faça login para continuar</p>
+          <p class="login-chamada">Acesse sua escala e a cobertura da operação.</p>
 
           <form id="form-login" autocomplete="off" novalidate>
             <label class="campo-icone">

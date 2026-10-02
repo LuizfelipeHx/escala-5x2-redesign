@@ -22,8 +22,8 @@
 
 .faixa {
   display: flex; align-items: center; gap: 10px 14px; flex-wrap: wrap;
-  background: var(--card); border-radius: var(--raio); box-shadow: var(--sombra);
-  padding: 12px 16px; margin-bottom: 14px;
+  background: var(--card); border: 1px solid var(--linha); border-radius: var(--raio); box-shadow: none;
+  padding: 13px 16px; margin-bottom: 14px;
 }
 .faixa-nome { font-size: 16px; }
 .faixa-nome small, .cdd h3 small { color: var(--muted); font-weight: 600; font-size: 12px; }
@@ -49,8 +49,8 @@
 .resumo-3 { grid-template-columns: repeat(3, 1fr); }
 .resumo-4 { grid-template-columns: repeat(4, 1fr); }
 .kpi {
-  background: var(--card); border-radius: var(--raio); box-shadow: var(--sombra);
-  padding: 14px 16px; border-left: 5px solid var(--navy);
+  background: var(--card); border: 1px solid var(--linha); border-radius: var(--raio); box-shadow: none;
+  padding: 13px 16px; border-top: 5px solid var(--navy);
   display: flex; flex-direction: column; gap: 4px;
 }
 .kpi small { color: var(--muted); font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; }
@@ -77,7 +77,7 @@
 
 /* ---------- Listas de pessoas ---------- */
 .colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.painel { background: var(--card); border-radius: var(--raio); box-shadow: var(--sombra); padding: 16px; }
+.painel { background: var(--card); border: 1px solid var(--linha); border-radius: var(--raio); box-shadow: none; padding: 17px; }
 .painel h3 { margin: 0 0 8px; font-size: 15px; display: flex; align-items: center; gap: 8px; }
 .pessoa {
   display: flex; align-items: center; gap: 12px;
@@ -99,12 +99,12 @@
 .vazio { color: var(--muted); font-size: 14px; padding: 8px 0; }
 
 /* ---------- Tabelas ---------- */
-.tabela-wrap { background: var(--card); border-radius: var(--raio); box-shadow: var(--sombra); overflow-x: auto; }
+.tabela-wrap { background: var(--card); border: 1px solid var(--linha); border-radius: var(--raio); box-shadow: none; overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; min-width: 680px; }
 th, td { padding: 10px 8px; text-align: center; border-bottom: 1px solid var(--linha); font-size: 14px; }
-th { background: var(--navy); color: #fff; font-size: 13px; font-weight: 600; vertical-align: top; }
+th { background: #eaf0f7; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .6px; vertical-align: top; text-transform: uppercase; }
 th small { display: block; font-weight: 400; opacity: 0.75; }
-th small.marcador { opacity: 1; color: var(--gold); font-size: 11px; font-weight: 600; }
+th small.marcador { opacity: 1; color: var(--azul); font-size: 11px; font-weight: 600; }
 th:first-child, td:first-child { text-align: left; padding-left: 16px; }
 th.hoje { background: var(--gold); color: var(--navy); }
 th.hoje small.marcador { color: var(--navy); }
