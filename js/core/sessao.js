@@ -9,7 +9,7 @@
 (function (E) {
   "use strict";
 
-  const CHAVE = "escala5x2.sessao";
+  const CHAVE = "escala5x2-redesign.sessao";
   const ERRO = "Matrícula ou senha incorretas.";
 
   // O navegador pode bloquear o armazenamento (aba anônima, por exemplo).

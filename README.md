@@ -1,4 +1,6 @@
-# Consulta de Escala 5x2
+# Escala em dia · Redesign
+
+Versão independente de `LuizfelipeHx/escala-5x2`. Inclui as abas **Absenteísmo** e **Calendário de risco**, com histórico inteiramente fictício para apresentação. Consulte [metodologia e limites](docs/ABSENTEISMO-DEMO.md).
 
 Protótipo de um site para as equipes de entrega consultarem a escala 5x2 (5 dias de trabalho e 2 de folga por semana) em **4 CDDs com 3 tipos de escala**.
 
@@ -6,9 +8,9 @@ Projeto acadêmico do MBL, voltado para a operação Ambev. **Todos os nomes e d
 
 ## Como abrir
 
-**Online (para o time testar):** https://luizfelipehx.github.io/escala-5x2/
+**Online (quando o GitHub Pages estiver habilitado):** https://luizfelipehx.github.io/escala-5x2-redesign/
 
-Funciona no celular e no computador. Testes automáticos: https://luizfelipehx.github.io/escala-5x2/testes.html
+Funciona no celular e no computador. Testes automáticos: `testes.html` e `node tests/absenteismo.cjs`.
 
 **No computador, sem internet:** baixe a pasta e dê dois cliques em `index.html` (Chrome ou Edge).
 
@@ -25,7 +27,7 @@ Funciona no celular e no computador. Testes automáticos: https://luizfelipehx.g
 
 ## Acessos de demonstração
 
-A senha de todos é **1234**. Na tela de login também dá para clicar direto num dos acessos.
+A senha de todos é **1234**. Digite a matrícula e a senha na tela de login.
 
 O site tem **duas visões**: **Liderança** e **Colaborador**. Na liderança, todos veem as mesmas telas; o que muda é quais CDDs cada pessoa acompanha. O cargo é só um rótulo.
 

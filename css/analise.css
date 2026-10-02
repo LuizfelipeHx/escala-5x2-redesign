@@ -1,0 +1,18 @@
+/* Mantém a paleta da operação; a grade mensal é o foco da nova visão. */
+.demo-aviso{display:flex;flex-direction:column;gap:5px;background:#fff5ce;border:1px solid #e5c767;border-radius:12px;padding:13px 17px;margin-bottom:22px;color:#55430c;font-size:13px}
+.demo-aviso b{font-size:11px;letter-spacing:1px}
+.analise-sobretitulo{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:0 0 7px}
+.analise-linha{display:grid;grid-template-columns:1fr 90px 54px;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--linha);font-size:14px}
+.analise-linha:last-child{border-bottom:0}.analise-linha small{display:block;font-size:11px;color:var(--muted);margin-top:4px}
+.analise-linha strong{text-align:right;font-variant-numeric:tabular-nums}.analise-barra{height:9px;background:#e8eef5;border-radius:8px;overflow:hidden}.analise-barra i{display:block;height:100%;background:var(--azul);border-radius:8px}
+.analise-exclusoes{display:flex;flex-wrap:wrap;gap:10px 22px;padding:18px 0;font-size:13px}.analise-exclusoes b{width:100%}
+.analise-metodo{margin-top:24px;padding:16px 20px;background:white;border:1px solid var(--linha);border-radius:12px;font-size:14px}.analise-metodo summary{font-weight:700;cursor:pointer}.analise-metodo p{max-width:90ch;color:var(--muted);line-height:1.65}
+.risco-legenda{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.risco-pill{display:inline-block;padding:6px 11px;border-radius:8px;font-size:12px;font-weight:750}
+.risco-baixo{background:#e4f3ec;color:#155f41}.risco-atencao{background:#fff2c6;color:#725500}.risco-alto{background:#fce4df;color:#983527}.risco-sem-base{background:#edf0f4;color:#617086}
+.risco-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:start}.risco-cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;background:white;padding:16px;border:1px solid var(--linha);border-radius:15px}
+.risco-dia{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:7px;min-height:99px;border:2px solid transparent;border-radius:10px;padding:10px 8px;cursor:pointer;font-variant-numeric:tabular-nums;transition:box-shadow .15s}
+.risco-dia b{font-size:18px}.risco-dia span{font-size:11px}.risco-dia strong{font-size:13px}.risco-dia[aria-pressed=true]{border-color:var(--navy);box-shadow:0 0 0 2px white,0 0 0 3px var(--navy)}.risco-dia:hover{box-shadow:inset 0 0 0 1px currentColor}
+.risco-detalhe h3{font-size:19px;line-height:1.4;margin-bottom:14px}.risco-detalhe p{font-size:13px;line-height:1.6}.risco-amostra{font-size:14px;padding:12px 0}.risco-amostra b{font-size:19px}.risco-fontes{padding:0;list-style:none}.risco-fontes li{font-size:12px;padding:9px 0;border-top:1px solid var(--linha)}.risco-fontes span{display:block;color:var(--muted);margin-top:3px}.risco-acao{padding:13px;border-radius:10px;background:#eaf0f7;font-size:13px}.risco-acao p{margin-bottom:0}
+@media(max-width:960px){.risco-layout{grid-template-columns:1fr}.risco-detalhe{max-width:none}}
+@media(max-width:600px){.risco-cal{gap:4px;padding:8px}.risco-dia{min-height:83px;padding:7px 3px;gap:4px;border-radius:7px}.risco-dia b{font-size:16px}.risco-dia span{font-size:9px}.risco-dia strong{font-size:11px}.analise-linha{grid-template-columns:1fr 55px 48px;gap:7px}.ctrl-botoes input[type=month]{width:150px}.demo-aviso{font-size:12px}.risco-legenda{gap:5px}.risco-pill{font-size:11px;padding:6px 8px}}
+@media(prefers-reduced-motion:reduce){.risco-dia{transition:none}}

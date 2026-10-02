@@ -11,7 +11,7 @@
   "use strict";
 
   const VERSAO = 1;
-  let chave = "escala5x2.dados";
+  let chave = "escala5x2-redesign.dados";
   let exemplo = null;        // cópia intocada dos arquivos da pasta dados/
   let personalizado = false; // true quando há alterações salvas no navegador
   let avisoCarga = "";

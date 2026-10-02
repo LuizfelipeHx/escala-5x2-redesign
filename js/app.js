@@ -13,6 +13,8 @@
     { id: "hoje", rotulo: "Hoje", tela: "hoje", filtros: true },
     { id: "semana", rotulo: "Semana", tela: "semana", filtros: true },
     { id: "cobertura", rotulo: "Cobertura", tela: "cobertura" },
+    { id: "historico", rotulo: "Absenteísmo", tela: "historico" },
+    { id: "risco", rotulo: "Calendário de risco", tela: "risco" },
     { id: "individual", rotulo: "Escala individual", tela: "individual" },
     { id: "cadastro", rotulo: "Cadastro", tela: "cadastro" },
   ];
@@ -29,6 +31,9 @@
     inicioCobertura: D.hoje(),
     busca: "",
     funcao: "",
+    mesHistorico: "2026-09",
+    mesRisco: "2026-11",
+    diaRisco: null,
   };
 
   // Liderança com mais de um CDD ganha a "Visão geral" consolidada.
@@ -127,6 +132,9 @@
   const nomeDe = (m) => R.porMatricula(m)?.nome || m;
 
   const ACOES = {
+    "risco-ant": () => { moverMesRisco(-1); },
+    "risco-prox": () => { moverMesRisco(1); },
+    "risco-dia": (el) => { estado.diaRisco = el.dataset.dia; },
     "dia-ant":  () => { estado.data = D.addDias(estado.data, -1); },
     "dia-prox": () => { estado.data = D.addDias(estado.data, 1); },
     "sem-ant":  () => { estado.data = D.addDias(estado.data, -7); },
@@ -168,6 +176,11 @@
   };
 
   const podeVerEquipe = () => E.sessao.ehLideranca(estado.usuario);
+
+  function moverMesRisco(passo) {
+    const mes = D.chaveMes(D.addMeses(D.deIso(`${estado.mesRisco}-01`), passo));
+    if (mes >= "2025-01" && mes <= "2027-12") { estado.mesRisco = mes; estado.diaRisco = null; }
+  }
 
   function abrirPessoa(matricula) {
     Object.assign(estado, { pessoaMatricula: matricula, mes: D.inicioDoMes(estado.data), aba: "individual" });
@@ -221,7 +234,9 @@
     }
 
     const { id, value } = el;
-    if (id === "data-sel" && value) estado.data = D.deIso(value);
+    if (id === "risco-mes" && /^\d{4}-\d{2}$/.test(value) && value >= "2025-01" && value <= "2027-12") { estado.mesRisco = value; estado.diaRisco = null; }
+    else if (id === "historico-mes" && /^\d{4}-\d{2}$/.test(value)) estado.mesHistorico = value;
+    else if (id === "data-sel" && value) estado.data = D.deIso(value);
     else if (id === "pessoa-sel") estado.pessoaMatricula = value;
     else if (id === "unidade-sel") selecionarUnidade(value);
     else if (id === "f-funcao") estado.funcao = value;

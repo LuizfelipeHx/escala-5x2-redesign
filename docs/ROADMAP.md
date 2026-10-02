@@ -1,5 +1,9 @@
 # Roadmap
 
+## Versão paralela: demonstração de absenteísmo (02/10/2026)
+
+As abas de análise histórica e calendário de risco estão implementadas com dados sintéticos, comparativos e evidência por dia. Isso antecipa a demonstração visual das etapas 3 e 4, mas a integração com AFDT continua pendente. Ver [metodologia e limites](ABSENTEISMO-DEMO.md).
+
 ## Fase 0: Esboço (feito)
 
 - [x] Consulta de escala com dados fictícios, publicada no GitHub Pages
